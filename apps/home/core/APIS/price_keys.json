@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "algo-trade-394306",
+  "private_key_id": "6d9cffc582a4bd82fa6be63ed933e46ee561f830",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC9vkukaLBIrueF\n6yk8I86VS2rv4wG4kggpxF7bXQPfRtRO4pZZBgLXlRHqZnkKKgQQ0Xkgku7rrNbE\nEpzuJ9U//Bo7eQLT/kXqFOE14UGhzps7SP2LSLZgjWr1bTimFWyRY7zwl2WsfCVi\nLDTN1/j3ssNfOkPLt2dbBHT27ZibeoCXCkRfSNoJHRQZr8yafBia3u7XsZINnmfP\nHpzG9YQ5GZy/thP3S8tSzCZ3UMeUgl1N6DllFwmW/Grkm9wcwdx5M3nLTMAhpi45\nUVT1AOYxrh5A1A87U3R1Lt91tV7b1xggCrT/sMz3rIK+qKg1NyIWTjVTE96aKVss\nA49MJwCdAgMBAAECggEABJuT66ytJz60GaDx0eeOszpvIN8y4gAN2bHOmeYi22+1\nZSsEeqn2NLUGh9owM0p86cmkduGKkseSOZW4IOJvv8uH+YzBQFOq7/nM1EmhlePW\nCjUGDzVXVHXqtIYP+5yGk+tHodITYoJrR/yJ1bvabG13aB8amV5dUK0FiB+R9qiS\nslhFiCwmHFNBZd0H28V8yUZRh0UjJpuBN+HqoJ2o8Jh8QsHF8gsjpOa27MeD1mhr\nB77OA2R92PemWwg9jeNbwDUUe8B50Z7xPB4D3Xa3FIZ56vLVmfK5ADxJ8/2jZEkz\nuQzri9z82i845q528onuExWXH3NZTIP4nE1mNruqcQKBgQDnSZKBBPpU/4GlpS3V\nBqLJMd0+LUddeSrWJGC65w5lE2+oGOo7iWdmuv3IoPpun4inPSSto9+rb81aVwyv\nQxpHCYfJojCqTmOSXZXN6u67gFF+ZL+jv9XzK6rPyjW1o79H0m+sblSDCDUX76Ae\n0ypq/ybrSdAJdwdocxWVuaLUVQKBgQDSBF1ShbVXMroeaS3N8rKI9DWY7ObMyhJH\nsSd7UxvffPCDc48Cha9cdpzFWR8n1Aog2LuKwgUP52fLWzJEjjpXVfYNe7cOptKE\nNABgRtxvLZzlHqILU4vUS3rctueXiYz+q0fGkmaMgGJpdPn1ZXKElG7Bds+8YzCQ\nzGQzTD4DKQKBgEvs4QUtpygEAIFqKhOGbCX0Epb4sjbDMga+RmrUsusHaF4cX7hP\nsPwOYoVcIxnxkSCld8bwxto2h4kijm1yb8vmGwdcEPG3bgR8aFMCzoAK7bW6SRbu\nQMPlD9vKm7sXGBHxyOsoBOJG7XcAGOZFl+UsAZC32G1i/7GQJgPSvttJAoGBAKcU\nRdIjAXOPrbYH4yLXE+YUspco0SzXDdfvPgPEyIXx9b3+LyXIiQw8aNgv4LNk43Hi\nOsFXPYO7iz2jHcighhV5E7kCVU3Ytd3rKOlvNmtUlF9LEYuFOdb4/ZOeB3ztNzhb\nt0xoqCDa+m//WeQ6gvKqy7op9XZgSwDHOmf9HdCRAoGBAMWkXdhoQRG+iH/vCq/P\nFSfuMYHwxUehRcSWFmCPUWmKOaoJIcwFUvNKsCBGtG6E2DOwLV8M1E79z5aB9rGn\n1OifWpVY+bOrNk6jd89iEbKGjXJexU2vVpmmN2Xigp4JU3jWsPIBkq6rCwwLx2CF\nscP+tZR4ITDcMJMAYzUllQJf\n-----END PRIVATE KEY-----\n",
+  "client_email": "trader@algo-trade-394306.iam.gserviceaccount.com",
+  "client_id": "110670712454224626502",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/trader%40algo-trade-394306.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

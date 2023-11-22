@@ -1,0 +1,210 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Dashboard {% endblock %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}
+<style>
+    button {
+  position: relative;
+  padding: 10px 20px;
+  border-radius: 7px;
+  border: 1px solid rgb(61, 106, 255);
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+  background: transparent;
+  color: #fff;
+  overflow: hidden;
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+button:hover {
+  background: rgb(61, 106, 255);
+  box-shadow: 0 0 30px 5px rgba(0, 142, 236, 0.815);
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+button:hover::before {
+  -webkit-animation: sh02 0.5s 0s linear;
+  -moz-animation: sh02 0.5s 0s linear;
+  animation: sh02 0.5s 0s linear;
+}
+
+button::before {
+  content: '';
+  display: block;
+  width: 0px;
+  height: 86%;
+  position: absolute;
+  top: 7%;
+  left: 0%;
+  opacity: 0;
+  background: #fff;
+  box-shadow: 0 0 50px 30px #fff;
+  -webkit-transform: skewX(-20deg);
+  -moz-transform: skewX(-20deg);
+  -ms-transform: skewX(-20deg);
+  -o-transform: skewX(-20deg);
+  transform: skewX(-20deg);
+}
+
+@keyframes sh02 {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+
+button:active {
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: box-shadow 0.2s ease-in;
+  -moz-transition: box-shadow 0.2s ease-in;
+  transition: box-shadow 0.2s ease-in;
+}
+    .fixed-right-box {
+        position: fixed;
+        top: 60px;
+        right: 0;
+        bottom: 0;
+        height:200px ;
+        width: 300px; /* Set the width you desire */
+        overflow-y: auto; /* Add vertical scrolling if content exceeds the box height */
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* IE/Edge */
+    }
+    .fixed-right-box::-webkit-scrollbar {
+        width: 0;
+    }
+    .fixed-right-box .card-header .card-title {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+
+    .fixed-right-box-2 {
+        position: fixed;
+        top: 300px;
+        right: 0;
+        bottom: 0;
+        height:200px ;
+        width: 300px; /* Set the width you desire */
+        overflow-y: auto; /* Add vertical scrolling if content exceeds the box height */
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* IE/Edge */
+    }
+    .fixed-right-box-2::-webkit-scrollbar {
+        width: 0;
+    }
+    .fixed-right-box-2 .card-header .card-title {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+</style>{% endblock stylesheets %}
+
+{% block content %}
+    <div class="content">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="live-graph">
+                    <p>Live graph - construction</p>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="fixed-right-box">
+                    <div class="card card-chart">
+                        <div class="card-header">
+                            <h4 class="card-title"><i class="tim-icons icon-bell-55 text-primary"></i>Watch-list</h4>
+                        </div>
+                        <div class="watchlist" id="watchlist">
+                            <span></span>
+                        </div>
+                    </div>
+                    <!-- You had an additional fixed-right-box here; removed for proper structure -->
+                </div>
+                <div class="col-md-2">
+                    <div class="fixed-right-box-2">
+                        <div class = "card card-chart">
+                        <div class="card-header">
+                        <h4 class="card-title"><i class="tim-icons icon-compass-05 text-primary"></i> Strategies</h4>
+                        </div>
+                             <button class="Mavg" id="one_month" onclick="scrollToSection('my-Avg')">Moving-Average</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+    <div class = "row">
+        <div class="col-sm-9">
+                <div class="card card-chart">
+                    <div class="card-header">
+                        <h5 class="card-category"></h5>
+                        <h3 class="card-title"><i class="tim-icons icon-vector text-primary"></i>Moving-Average</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="chart-area" style="height: 400px;">
+                            <button class = "Mavg"  id="one_month">1 Month</button>
+                            <button class = "Mavg" id="six_months">6 Months</button>
+                            <button class = "Mavg" id="one_year">1 Year</button>
+                            <button class = "Mavg" id="ytd">YTD</button>
+                            <button class = "Mavg" id="all">All</button>
+                            <div id = 'avg'></div>
+                        </div>
+                    </div>
+                    <div class = "row">
+                        <div class = "col-sm-7">
+                            <div class = "card">
+                            <div class = "card-header">
+                                <div class = "chart-area" style="height: 200px">
+                                    <h5 class="card-category">Details</h5>
+                                    <div id="myAvgBar">
+
+                                    </div>
+                                </div>
+                                <div id = 'my-Avg'></div>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="col-sm-2">
+                        <div class = "card">
+                            <div class = "card-header">
+                                <p>Buy</p>
+                                <p>Sell</p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+<script>
+    $(document).ready(function () {
+        // Javascript method's body can be found in assets/js/demos.js
+
+    });
+</script>
+{% endblock javascripts %}
